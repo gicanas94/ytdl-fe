@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+// @packages
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// @app
+import Container from 'components/Container';
+import Converter from 'labs/Converter';
+
+const App = () => (
+  <div className="h-screen w-full bg-primaryDark p-6">
+    <Container>
+      <Converter className="mx-auto max-w-2xl" />
+    </Container>
+  </div>
+);
 
 export default App;
