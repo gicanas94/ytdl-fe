@@ -3,26 +3,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-const Spinner = ({ className, color, size }) => (
+const Spinner = ({ borderClassName, className, size }) => (
   <div className={className} style={{ height: size, width: size }}>
     <div
       className={cn(
-        'h-full w-full animate-spin rounded-full border-[3px] border-t-transparent',
-        { [`border-${color}`]: color },
+        'h-full w-full animate-spin rounded-full border-[3px] border-t-transparent transition-colors',
+        borderClassName,
       )}
     />
   </div>
 );
 
 Spinner.defaultProps = {
+  borderClassName: 'border-primary',
   className: undefined,
-  color: 'primary',
   size: 50,
 };
 
 Spinner.propTypes = {
+  borderClassName: PropTypes.string,
   className: PropTypes.string,
-  color: PropTypes.string,
   size: PropTypes.number,
 };
 

@@ -9,12 +9,14 @@
     "sourceType": "module"
   },
   "rules": {
-    "import/no-extraneous-dependencies": 0,
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "no-console": "off",
     "no-unused-vars": "warn",
-    "react/button-has-type": 0,
-    "react/function-component-definition": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
-    "react/jsx-props-no-spreading": 0
+    "react/button-has-type": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js"] }],
+    "react/jsx-props-no-spreading": "off"
   },
   "settings": {
     "import/resolver": {

@@ -8,16 +8,18 @@ import Button from 'components/Button';
 import Input from 'components/Input';
 import Paper from 'components/Paper';
 import Typography from 'components/Typography';
+import useDownload from 'services/v1/download/get';
 
 const Converter = ({ className, shadow }) => {
   const [inputValue, setInputValue] = useState('');
+  const useDownloadHook = useDownload();
 
   const handleInputChange = (value) => {
     setInputValue(value);
   };
 
   const handleButtonClick = () => {
-    console.log('handleButtonClick');
+    useDownloadHook.trigger({ params: { url: inputValue } });
   };
 
   return (
@@ -34,7 +36,12 @@ const Converter = ({ className, shadow }) => {
         </Typography>
         <Input onChange={handleInputChange} value={inputValue} />
       </div>
-      <Button onClick={handleButtonClick}>Download</Button>
+      <Button
+        isLoading={useDownloadHook.isMutating}
+        onClick={handleButtonClick}
+      >
+        Download
+      </Button>
     </Paper>
   );
 };

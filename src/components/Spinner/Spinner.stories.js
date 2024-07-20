@@ -9,7 +9,7 @@ export default {
   title: 'components/Spinner',
 };
 
-const Template = (args) => <Component className="border-primary" {...args} />;
+const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
 

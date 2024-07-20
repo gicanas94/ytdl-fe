@@ -13,7 +13,6 @@ module.exports = {
         white: '#ffffff',
       },
       fontFamily: {
-        lato: ['Lato', ...defaultTheme.fontFamily.sans],
         notoSans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
       },
     },

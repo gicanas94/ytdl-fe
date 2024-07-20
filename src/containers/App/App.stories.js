@@ -6,12 +6,10 @@ import Component from '.';
 
 export default {
   component: Component,
-  title: 'components/Container',
+  title: 'containers/App',
 };
 
-const Template = (args) => (
-  <Component className="h-60 bg-primaryDark" {...args} />
-);
+const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
 
